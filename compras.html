@@ -123,15 +123,55 @@
         <div class="card">
             <div class="card-body">
                 <h1 class="h2">Smartphone1</h1>
-                <p class="h3 py-2">Precio</p>
+                <p class="h3 py-2">$1.250.000</p>
                 <p class="py-2">
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star text-warning"></i>
                     <i class="fa fa-star text-warning"></i>
-                    <i class="fa fa-star text-secundary"></i>
-                    <span class="list-inline-item text-dark"> Rating</span>
+                    <i class="fa fa-star text-secondary"></i>
+                    <span class="list-inline-item text-dark">Rating 4 | 4 Comentarios</span>
                 </p>
+
+                <h6>Descripción</h6>
+                <p>Texto de la descripción</p>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <h6>Color</h6>
+                    </li>
+                    <li class="list-inline-item">
+                        <p class="text-muted"><strong>info smartphone</strong></p>
+                    </li>
+                </ul>
+
+                <h6>Especificaciones</h6>
+                <ul class="list-unstyled pb-3">
+                    <li>Texto de Especificaciones</li>
+
+                </ul>
+
+                <form action="" method="GET">
+                    <input type="hidden" name="product-title" value="Activewear">
+                    <div class="row">
+                        <div class="col-auto">
+                            <ul class="list-inline pb-3">
+                                <li class="list-inline-item text-right">
+                                    Cantidad
+                                    <input type="hidden" name="product-quanity" id="product-quanity" value="1">
+                                </li>
+                                <li class="list-inline-item"><span class="btn btn-success" id="btn-minus">-</span></li>
+                                <li class="list-inline-item"><span class="badge bg-secondary" id="var-value">1</span></li>
+                                <li class="list-inline-item"><span class="btn btn-success" id="btn-plus">+</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row pb-3">
+                        <div class="col d-grid">
+                            <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy">Comprar</button>
+                        </div>
+
+                    </div>
+                </form>
 
             </div>
 
