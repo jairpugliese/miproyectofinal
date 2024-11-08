@@ -206,23 +206,23 @@
                 function renderizarProductos(){
                     baseDatos.forEach((info) =>{
                         const miNodo = document.createElement('div');
-                        miNodo.classlist.add('card','col-sm-4');
+                        miNodo.classList.add('card','col-sm-4');
 
                         //body
                         const miNodoCardBody = document.createElement('div');
-                        miNodoCardBody.classlist.add('card-body','col-sm-4');
+                        miNodoCardBody.classList.add('card-body','col-sm-4');
 
                         //titulo
                         const miNodoTitle = document.createElement('h6');
-                        miNodoTitle.classlist.add('card-title');
+                        miNodoTitle.classList.add('card-title');
                         miNodoTitle.textContent = info.nombre;
                         //imagen
                         const miNodoImagen = document.createElement('img');
-                        miNodoImagen.classlist.add('img-fluid');
+                        miNodoImagen.classList.add('img-fluid');
                         miNodoImagen.setAttribute ('src', info.imagen);
                         //precio
                         const miNodoPrecio = document.createElement('p');
-                        miNodoPrecio.classlist.add('card-text');
+                        miNodoPrecio.classList.add('card-text');
                         miNodoPrecio.textContent = `${divisa}${info.precio}`;
 
                         //boton
