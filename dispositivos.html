@@ -240,15 +240,25 @@
                         
                     });
                 }
+                //evento para añadir un producto al carrito de compra
+                function anadirProductoAlCarrito(evento){
+                    carrito.push(evento.target.getAttribute('marcador'))
+                    renderizarCarrito();
+                        handleCarritoValue(carrito.length)
+                }
+                function handleCarritoValue(value){
+                    const carritoContainer = document.getElementById("carrito-value");
+                    carritoContainer.textContent=`${value}`
+                }
 
                 //dibujar todos los guardados del carrito 
                 function renderizarCarrito(){
                     //vaciar html
                     DOMcarrito.textContent = '';
                     //quitar duplicados
-                    const carritoDuplicados = [... new set(carrito)];
+                    const carritoSinDuplicados = [... new set(carrito)];
                     //generación de los nodos
-                    carritoDuplicados.forEach((item)=>{
+                    carritoSinDuplicados.forEach((item)=>{
                         //obtenemos el item que necesitamos de la base de datos
                         const miItem = baseDatos.filter((itemBaseDatos)=>{
                             return itemBaseDatos.id ===parseInt(item);
@@ -258,6 +268,11 @@
                             return itemId===item ? total+= 1 : total;
                         },0);
                         //creamos el nodp del item del carrito
+                        const miNodo=document.createElement('li');
+                        miNodo.classList.add('list-group-item','text-right', 'mx-2');
+                        miNodo.textContent=`${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa}`;
+
+                        //boton borrar
                         const MiBoton = document.createElement('button');
                         MiBoton.classList.add('btn','btn-danger','mx-5');
                         MiBoton.textContent='X';
