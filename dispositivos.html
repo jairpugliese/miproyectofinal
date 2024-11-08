@@ -278,7 +278,7 @@
                         MiBoton.textContent='X';
                         MiBoton.style.marginLeft='1rem';
                         MiBoton.dataset.item=item;
-                        MiBoton.addEventListener('click',borraritemCarrito);
+                        MiBoton.addEventListener('click',borrarItemCarrito);
                         //mezclamos nodo
                         miNodo.appendChild(MiBoton);
                         DOMcarrito.appendChild(miNodo);
@@ -287,6 +287,21 @@
 
 
                 }
+
+                //para borrar elementos del carrito
+                function borrarItemCarrito(evento) {
+                const id = evento.target.dataset.item;
+                // Borramos todos los productos
+                carrito = carrito.filter((carritoId) => {
+                  return carritoId !== id;
+                });
+                // volvemos a renderizar
+                renderizarCarrito();
+                guardarCarritoEnLocalStorage();
+
+                handleCarritoValue(carrito.length)
+                }
+
                 renderizarProductos();
                 renderizarCarrito();
 
