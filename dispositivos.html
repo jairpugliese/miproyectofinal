@@ -160,8 +160,8 @@
             </div>
 
             <!-- productos en el carrito -->
-             <script>
-                document.addEventListener('DomContentLoaded',()=>{
+            <script>
+                document.addEventListener('DOMContentLoaded',()=>{
                     const baseDatos=[
                         {
                             id:1,
@@ -192,10 +192,10 @@
                             nombre:'iPhone 8, descripción',
                             precio: 750000,
                             imagen: 'assets/img/iPhone2.png',
-                        },
+                        }
                     ];
                     let carrito =[];
-                    const divisa = '$'
+                    const divisa = '$';
                     const DOMitems = document.querySelector('#items');
                     const DOMcarrito = document.querySelector('#carrito');
                     const DOMtotal = document.querySelector('#total');
@@ -225,6 +225,12 @@
                         miNodoPrecio.classlist.add('card-text');
                         miNodoPrecio.textContent = `${divisa}${info.precio}`;
 
+                        //boton
+                        const MiNodoBoton = document.createElement('buton');
+                        MiNodoBoton.classList.add('btn','btn-primary');
+                        MiNodoBoton.textContent='Agregar';
+                        MiNodoBoton.setAttribute('marcador',info.id);
+                        MiNodoBoton.addEventListener('click',anadirProductoAlCarrito);
                         //insertamos
                         miNodoCardBody.appendChild(miNodoImagen);
                         miNodoCardBody.appendChild(miNodoTitle);
@@ -277,6 +283,8 @@
 
             
             <!-- fin del productos en el carrito -->
+
+            
              <!-- carrito -->
              <div class="container">
                 <div class="row">
