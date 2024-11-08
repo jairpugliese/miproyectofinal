@@ -200,7 +200,7 @@
                     const DOMcarrito = document.querySelector('#carrito');
                     const DOMtotal = document.querySelector('#total');
                     const DOMbotonvaciar = document.querySelector('#boton-vaciar');
-                });
+                
 
                 // sección de funcion para el carrito
                 function renderizarProductos(){
@@ -235,7 +235,43 @@
                     });
                 }
 
-                
+                //dibujar todos los guardados del carrito 
+                function renderizarCarrito(){
+                    //vaciar html
+                    DOMcarrito.textContent = '';
+                    //quitar duplicados
+                    const carritoDuplicados = [... new set(carrito)];
+                    //generación de los nodos
+                    carritoDuplicados.forEach((item)=>{
+                        //obtenemos el item que necesitamos de la base de datos
+                        const miItem = baseDatos.filter((itemBaseDatos)=>{
+                            return itemBaseDatos.id ===parseInt(item);
+                        });
+                        //cantidad de veces que se repite el producto
+                        const numeroUnidadesItem = carrito.reduce((total,itemId)=>{
+                            return itemId===item ? total+= 1 : total;
+                        },0);
+                        //creamos el nodp del item del carrito
+                        const MiBoton = document.createElement('button');
+                        MiBoton.classList.add('btn','btn-danger','mx-5');
+                        MiBoton.textContent='X';
+                        MiBoton.style.marginLeft='1rem';
+                        MiBoton.dataset.item=item;
+                        MiBoton.addEventListener('click',borraritemCarrito);
+                        //mezclamos nodo
+                        miNodo.appendChild(MiBoton);
+                        DOMcarrito.appendChild(miNodo);
+
+                    });
+
+
+                }
+                renderizarProductos();
+                renderizarCarrito();
+
+
+            });
+
              </script>
 
 
