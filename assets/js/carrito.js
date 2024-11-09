@@ -112,9 +112,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Borrar items del carrito
     function borrarItemCarrito(evento) {
         const id = evento.target.dataset.items;
-        carrito = carrito.filter((carritoId) => carritoId !== id);
+        carrito = carrito.filter((carritoId) => carritoId {
+            return carritoId !==id;
+        });
+
         renderizarCarrito();
-        guardarCarritoEnLocalStorage();
         handleCarritoValue(carrito.length);
     }
 
@@ -134,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function vaciarCarrito(){
         carrito=[];
         renderizarCarrito();
+        localStorage.clear();
     }
 
 
