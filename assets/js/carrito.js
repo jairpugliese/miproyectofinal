@@ -5,14 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
             nombre: 'iPhone 12, descripción',
             precio: 1200000,
             imagen: 'assets/img/iPhone1.png',
-            categoria: 'iPhone'
+            categoria:
         },
         {
             id: 2,
             nombre: 'iPhone 13, descripción',
             precio: 12500000,
             imagen: 'assets/img/iPhone2.png'
-            categoria: 'iPhone'
         }
     ];
 
