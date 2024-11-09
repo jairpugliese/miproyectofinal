@@ -2,286 +2,421 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto Final</title>
-    <!-- Iconos -->
+    <meta name="viewport" content ="width=device-width", initial-scale="1.0">
+    <title>Proyecto final</title>
+    <!--iconos-->
     <link rel="apple-touch-icon" href="assets/img/telefono-movil.png">
-    <!-- Conexiones para CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/templatemo.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- las conexiones para css-->
+     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <link rel="stylesheet" href="assets/css/templatemo.css">
+     <link rel="stylesheet" href="assets/css/custom.css">
+     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 </head>
 <body>
-    <!-- Inicio del encabezado -->
+    <!--inicio del encabezado-->
     <nav class="navbar navbar-expand-lg bg-dark navbar-light" id="page_nav_top">
         <div class="container text-light">
             <div class="w-100 d-flex justify-content-between">
                 <div>
                     <i class="fa fa-envelope mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:jairpugliese@gmail.com">jairpugliese@gmail.com</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none"
+                    href="mailto:jairpugliese@gmail.com">jairpugliese@gmail.com</a>
                     <i class="fa fa-phone mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:+573043481993">+57-304-348-1993</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none"
+                    href="tel:304-348-1993">+57-304-348-1993</a>
                 </div>
                 <div>
-                    <a class="facebook-color" href="https://fb.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
-                    <a class="instagram-color" href="https://www.instagram.com" target="_blank" rel="noopener"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
-                    <a class="twitter-color" href="https://twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
-                    <a class="whatsapp-color" href="https://wa.me/573043481993?text=hola, vengo de tu página web." target="_blank" rel="noopener"><i class="fab fa-whatsapp fa-sm fa-fw me-2"></i></a>
+                    <a class ="facebook-color" href="https://fb.com" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                    <a class ="instagram-color" href="https://www.instagram.com" target="_blank" rel="sponsored"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                    <a class="twitter-color" href="https://twitter.com" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                    <a class="whatsaap-color" href="https://wa.me/573043481993?text=hola, vengo de tu ágina web." target="_blank" rel="sponsored"><i class="fab fa-whatsapp fa-sm fa-fw me-2"></i></a>
                 </div>
             </div>
         </div>
-    </nav>
-    <!-- Fin del encabezado -->
+    </nav>   
+<!--fin del encabezado-->
 
-    <!-- Inicio del menú -->
-    <nav class="navbar navbar-expand-lg navbar-light shadow">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">Sells-phones</a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#Opciones" aria-controls="Opciones" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between" id="Opciones">
-                <div class="flex-fill">
-                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="dispositivos.html">Dispositivos</a></li>
-                        <li class="nav-item"><a class="nav-link" href="metodosdepago.html">Métodos de pago</a></li>
-                        <li class="nav-item"><a class="nav-link" href="acercade.html">Acerca de nosotros</a></li>
-                    </ul>
-                </div>
-                <!-- Inicio del carrito de compras -->
-                <div class="navbar align-self-center d-flex">
-                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Buscar...">
-                            <div class="input-group-text">
-                                <i class="fa fa-fw fa-search"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
-                        <i class="fa fa-fw fa-search text-dark me-2"></i>
-                    </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-cart-arrow-down text-dark me-1"></i>
-                        <span id="carrito-value" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
-                    </a>
-                    <a class="nav-icon position-relative text-decoration-none" href="#">
-                        <i class="fa fa-fw fa-user text-dark me-3"></i>
-                    </a>
-                </div>
-                <!-- Fin del carrito de compras -->
-            </div>
-        </div>
-    </nav>
-    <!-- Fin del menú -->
-
-    <!-- Contenido -->
-    <div class="container py-5">
-        <div class="row">
-            <div class="col-lg-3">
-                <h1 class="h2 pb-4">Categorías</h1>
-                <ul class="list-unstyled templatemo-accordion">
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Smartphones
-                            <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
-                        </a>
-                        <ul class="collapse show list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Samsung</a></li>
-                            <li><a class="text-decoration-none" href="#">iPhone</a></li>
-                        </ul>
+<!--inicio del menú-->
+<nav class="navbar navbar-expand-lg navbar-light shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+            Sells-phones
+        </a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#Opciones" aria-controls="Opciones" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>    
+        <div class="align-self-center collapse nav-collapse flex-fill d-lg-flex justify-content-lg-between" id="Opciones">
+            <div class="flex-fill">
+                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
                     </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Tablets
-                            <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
-                        </a>
-                        <ul id="collapseTwo" class="collapse list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">iPad</a></li>
-                            <li><a class="text-decoration-none" href="#">Tablets</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dispositivos.html">Dispositivos</a>
                     </li>
-                    <li class="pb-3">
-                        <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
-                            Condición
-                            <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
-                        </a>
-                        <ul id="collapseThree" class="collapse list-unstyled pl-3">
-                            <li><a class="text-decoration-none" href="#">Muy bien cuidado</a></li>
-                            <li><a class="text-decoration-none" href="#">Con rayones</a></li>
-                            <li><a class="text-decoration-none" href="#">Pequeños golpes</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="metodosdepago.html">Métodos de pago</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="acercade.html">Acerca de nosotros</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-9">
-                <div class="row">
-                    <div class="col-md-6">
-                        <ul class="list-inline shop-top-menu pb-3 pt-1">
-                            <li class="list-inline-item"><a class="h3 text-dark text-decoration-none mr-3" href="#">Todo</a></li>
-                            <li class="list-inline-item"><a class="h3 text-dark text-decoration-none mr-3" href="#">Smartphones</a></li>
-                            <li class="list-inline-item"><a class="h3 text-dark text-decoration-none" href="#">Tablet</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 pb-4">
-                        <div class="d-flex">
-                            <select class="form-control">
-                                <option>Presentar</option>
-                                <option>Menor a mayor precio</option>
-                                <option>A a Z</option>
-                            </select>
+<!-- inicio de carrito de compras -->
+            <div class="navbar align-self-center d-flex">
+                <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                        <div class="input-group-text">
+                            <i class="fa fa-fw fa-search"></i>
                         </div>
                     </div>
                 </div>
-
-                <!-- Productos en el carrito -->
-                <script>
-                    document.addEventListener('DOMContentLoaded', () => {
-                        const baseDatos = [
-                            {
-                                id: 1,
-                                nombre: 'iPhone 12, descripción',
-                                precio: 1200000,
-                                imagen: 'assets/img/iPhone1.png',
-                            },
-                            {
-                                id: 2,
-                                nombre: 'iPhone 13, descripción',
-                                precio: 12500000,
-                                imagen: 'assets/img/iPhone2.png',
-                            }
-                        ];
-
-                        let carrito = [];
-                        const divisa = '$';
-                        const DOMitems = document.querySelector('#items');
-                        const DOMcarrito = document.querySelector('#carrito');
-                        const DOMtotal = document.querySelector('#total');
-                        const DOMbotonvaciar = document.querySelector('#boton-vaciar');
-                        const miLocalStorage = window.localStorage;
-
-                        function renderizarProductos() {
-                            baseDatos.forEach((info) => {
-                                const miNodo = document.createElement('div');
-                                miNodo.classList.add('card', 'col-sm-4');
-                                const miNodoCardBody = document.createElement('div');
-                                miNodoCardBody.classList.add('card-body');
-                                const miNodoTitle = document.createElement('h5');
-                                miNodoTitle.classList.add('card-title');
-                                miNodoTitle.textContent = info.nombre;
-                                const miNodoImagen = document.createElement('img');
-                                miNodoImagen.classList.add('img-fluid');
-                                miNodoImagen.setAttribute('src', info.imagen);
-                                const miNodoPrecio = document.createElement('p');
-                                miNodoPrecio.classList.add('card-text');
-                                miNodoPrecio.textContent = `${divisa}${info.precio}`;
-                                const miNodoBoton = document.createElement('button');
-                                miNodoBoton.classList.add('btn', 'btn-primary');
-                                miNodoBoton.textContent = '+';
-                                miNodoBoton.setAttribute('marcador', info.id);
-                                miNodoBoton.addEventListener('click', anyadirProductoAlCarrito);
-                                miNodoCardBody.appendChild(miNodoImagen);
-                                miNodoCardBody.appendChild(miNodoTitle);
-                                miNodoCardBody.appendChild(miNodoPrecio);
-                                miNodoCardBody.appendChild(miNodoBoton);
-                                miNodo.appendChild(miNodoCardBody);
-                                DOMitems.appendChild(miNodo);
-                            });
-                        }
-
-                        function anyadirProductoAlCarrito(evento) {
-                            carrito.push(evento.target.getAttribute('marcador'));
-                            renderizarCarrito();
-                        }
-
-                        function renderizarCarrito() {
-                            DOMcarrito.textContent = '';
-                            const carritoSinDuplicados = [...new Set(carrito)];
-                            carritoSinDuplicados.forEach((item) => {
-                                const miItem = baseDatos.filter((itemBaseDatos) => {
-                                    return itemBaseDatos.id === parseInt(item);
-                                });
-                                const numeroUnidadesItem = carrito.reduce((total, itemId) => {
-                                    return itemId === item ? total += 1 : total;
-                                }, 0);
-                                const miNodo = document.createElement('li');
-                                miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
-                                miNodo.textContent = `${numeroUnidadesItem} x ${miItem[0].nombre} - ${divisa}${miItem[0].precio}`;
-                                const miBoton = document.createElement('button');
-                                miBoton.classList.add('btn', 'btn-danger', 'mx-5');
-                                miBoton.textContent = 'X';
-                                miBoton.style.marginLeft = '1rem';
-                                miBoton.dataset.item = item;
-                                miBoton.addEventListener('click', borrarItemCarrito);
-                                miNodo.appendChild(miBoton);
-                                DOMcarrito.appendChild(miNodo);
-                            });
-                            DOMtotal.textContent = calcularTotal();
-                        }
-
-                        function borrarItemCarrito(evento) {
-                            const id = evento.target.dataset.item;
-                            carrito = carrito.filter((carritoId) => {
-                                return carritoId !== id;
-                            });
-                            renderizarCarrito();
-                        }
-
-                        function calcularTotal() {
-                            return carrito.reduce((total, item) => {
-                                const miItem = baseDatos.filter((itemBaseDatos) => {
-                                    return itemBaseDatos.id === parseInt(item);
-                                });
-                                return total + miItem[0].precio;
-                            }, 0);
-                        }
-
-                        DOMbotonvaciar.addEventListener('click', vaciarCarrito);
-                        function vaciarCarrito() {
-                            carrito = [];
-                            renderizarCarrito();
-                        }
-
-                        renderizarProductos();
-                    });
-                </script>
+                <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                    <i class="fa fa-fw fa-search text-dark me-2"></i>
+                </a>
+                <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <i class="fa fa-fw fa-cart-arrow-down text-dark me-1"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
+                </a>
+                <a class="nav-icon position-relative text-decoration-none" href="#">
+                    <i class="fa fa-fw fa-user text-dark me-3"></i>
+                </a>
             </div>
+
+<!-- fin carrito de compras -->
         </div>
     </div>
+</nav>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light py-5">
-        <div class="container">
+<!--fin del menú-->
+
+<!-- contenido -->
+<div class="container py-5">
+    <div class="row">
+
+        <div class="col-lg-3">
+            <h1 class="h2 pb-4">Categorias</h1>
+            <ul class="list-unstyled templatemo-accordion">
+                <li class="pb-3">
+                    <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                        Smartphones
+                        <i class="fa fa-fw fa-chevron-circle-down mt-1"></i>
+                    </a>
+                    <ul class="collapse show list-unstyled pl-3">
+                        <li><a class="text-decoration-none" href="#">Samsung</a></li>
+                        <li><a class="text-decoration-none" href="#">Iphone</a></li>
+                    </ul>
+                </li>
+                <li class="pb-3">
+                    <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                        Tablets
+                        <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
+                    </a>
+                    <ul id="collapseTwo" class="collapse list-unstyled pl-3">
+                        <li><a class="text-decoration-none" href="#">Ipad</a></li>
+                        <li><a class="text-decoration-none" href="#">Tablets</a></li>
+                    </ul>
+                </li>
+                <li class="pb-3">
+                    <a class="collapsed d-flex justify-content-between h3 text-decoration-none" href="#">
+                        Aspecto
+                        <i class="pull-right fa fa-fw fa-chevron-circle-down mt-1"></i>
+                    </a>
+                    <ul id="collapseThree" class="collapse list-unstyled pl-3">
+                        <li><a class="text-decoration-none" href="#">Muy bien cuidado</a></li>
+                        <li><a class="text-decoration-none" href="#">Con rayones</a></li>
+                        <li><a class="text-decoration-none" href="#">Pequeños golpes</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-9">
             <div class="row">
-                <div class="col-lg-3 col-12">
-                    <h4 class="text-white">Información de contacto</h4>
-                    <p class="text-white">Ubicación: Bogotá, Colombia</p>
-                    <p class="text-white">Email: jairpugliese@gmail.com</p>
-                    <p class="text-white">Teléfono: +57 304 3481993</p>
-                </div>
-                <div class="col-lg-3 col-12">
-                    <h4 class="text-white">Enlaces útiles</h4>
-                    <ul class="list-unstyled">
-                        <li><a class="text-decoration-none text-light" href="#">Política de privacidad</a></li>
-                        <li><a class="text-decoration-none text-light" href="#">Términos y condiciones</a></li>
+                <div class="col-md-6">
+                    <ul class="list-inline shop-top-menu pb-3 pt-1">
+                        <li class="list-inline-item">
+                            <a class="h3 text-dark text-decoration-none mr-3" href="#">Todo</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="h3 text-dark text-decoration-none mr-3" href="#">Smartphones</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="h3 text-dark text-decoration-none" href="#">Tablet</a>
+                        </li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-12">
-                    <h4 class="text-white">Redes sociales</h4>
-                    <ul class="list-unstyled">
-                        <li><a class="text-decoration-none text-light" href="#">Facebook</a></li>
-                        <li><a class="text-decoration-none text-light" href="#">Instagram</a></li>
-                    </ul>
+                <div class="col-md-6 pb-4">
+                    <div class="d-flex">
+                        <select class="form-control">
+                            <option>Presentar</option>
+                            <option>Menor a mayor precio</option>
+                            <option>A a Z</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- Fin del footer -->
 
-    <!-- Bootstrap & jQuery scripts -->
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+            <!-- productos en el carrito -->
+            <script>
+                document.addEventListener('DOMContentLoaded',()=>{
+                    const baseDatos=[
+                        {
+                            id:1,
+                            nombre:'iPhone 12, descripción',
+                            precio: 1200000,
+                            imagen: 'assets/img/iPhone1.png',
+                        },
+                        {
+                            id:2,
+                            nombre:'iPhone 13, descripción',
+                            precio: 12500000,
+                            imagen: 'assets/img/iPhone2.png'
+                        }
+                    ];
+                    let carrito =[];
+                    const divisa = '$';
+                    const DOMitems = document.querySelector('#items');
+                    const DOMcarrito = document.querySelector('#carrito');
+                    const DOMtotal = document.querySelector('#total');
+                    const DOMbotonvaciar = document.querySelector('#boton-vaciar');
+                
+
+                // sección de funcion para el carrito
+                function renderizarProductos(){
+                    baseDatos.forEach((info) =>{
+                        const miNodo = document.createElement('div');
+                        miNodo.classList.add('card','col-sm-4');
+
+                        //body
+                        const miNodoCardBody = document.createElement('div');
+                        miNodoCardBody.classList.add('card-body','col-sm-4');
+
+                        //titulo
+                        const miNodoTitle = document.createElement('h6');
+                        miNodoTitle.classList.add('card-title');
+                        miNodoTitle.textContent = info.nombre;
+                        //imagen
+                        const miNodoImagen = document.createElement('img');
+                        miNodoImagen.classList.add('img-fluid');
+                        miNodoImagen.setAttribute ('src', info.imagen);
+                        //precio
+                        const miNodoPrecio = document.createElement('p');
+                        miNodoPrecio.classList.add('card-text');
+                        miNodoPrecio.textContent = ${divisa}${info.precio};
+
+                        //boton
+                        const MiNodoBoton = document.createElement('button');
+                        MiNodoBoton.classList.add('btn','btn-primary');
+                        MiNodoBoton.textContent='Agregar';
+                        MiNodoBoton.setAttribute('marcador',info.id);
+                        MiNodoBoton.addEventListener('click',anadirProductoAlCarrito);
+                        //insertamos
+                        miNodoCardBody.appendChild(miNodoImagen);
+                        miNodoCardBody.appendChild(miNodoTitle);
+                        miNodoCardBody.appendChild(miNodoPrecio);
+                        miNodo.appendChild(miNodoCardBody);
+                        DOMitems.appendChild(miNodo);
+                        
+                    });
+                }
+                //evento para añadir un producto al carrito de compra
+                function anadirProductoAlCarrito(evento){
+                    carrito.push(evento.target.getAttribute('marcador'))
+                    renderizarCarrito();
+                        handleCarritoValue(carrito.length)
+                }
+                function handleCarritoValue(value){
+                    const carritoContainer = document.getElementById("carrito-value");
+                    carritoContainer.textContent=${value}
+                }
+
+                //dibujar todos los guardados del carrito 
+                function renderizarCarrito(){
+                    //vaciar html
+                    DOMcarrito.textContent = '';
+                    //quitar duplicados
+                    const carritoSinDuplicados = [... new Set(carrito)];
+                    //generación de los nodos
+                    carritoSinDuplicados.forEach((item)=>{
+                        //obtenemos el item que necesitamos de la base de datos
+                        const miItem = baseDatos.filter((itemBaseDatos)=>{
+                            return itemBaseDatos.id ===parseInt(item);
+                        });
+                        //cantidad de veces que se repite el producto
+                        const numeroUnidadesItem = carrito.reduce((total,itemId)=>{
+                            return itemId===item ? total+= 1 : total;
+                        },0);
+                        //creamos el nodp del item del carrito
+                        const miNodo=document.createElement('li');
+                        miNodo.classList.add('list-group-item','text-right', 'mx-2');
+                        miNodo.textContent=${numeroUnidadesItem} x ${miItem[0].nombre} - ${miItem[0].precio}${divisa};
+
+                        //boton borrar
+                        const MiBoton = document.createElement('button');
+                        MiBoton.classList.add('btn','btn-danger','mx-5');
+                        MiBoton.textContent='X';
+                        MiBoton.style.marginLeft='1rem';
+                        MiBoton.dataset.item=item;
+                        MiBoton.addEventListener('click',borrarItemCarrito);
+                        //mezclamos nodo
+                        miNodo.appendChild(MiBoton);
+                        DOMcarrito.appendChild(miNodo);
+
+                    });
+
+
+                }
+
+                //para borrar elementos del carrito
+                function borrarItemCarrito(evento) {
+                const id = evento.target.dataset.item;
+                // Borramos todos los productos
+                carrito = carrito.filter((carritoId) => {
+                  return carritoId !== id;
+                });
+                // volvemos a renderizar
+                renderizarCarrito();
+                guardarCarritoEnLocalStorage();
+
+                handleCarritoValue(carrito.length)
+                }
+
+                renderizarProductos();
+                renderizarCarrito();
+
+
+            });
+
+             </script>
+
+
+            
+            <!-- fin del productos en el carrito -->
+
+            
+             <!-- carrito -->
+             <div class="container">
+                <div class="row">
+                    <!-- elmentos generados apartir de db del carrito -->
+                    <main id="items" class="col-sm-8 row"></main>
+                    <aside class="col-sm-4">
+                        <h3>
+                            Carrito
+                        </h3>
+                        <!-- elemntos del carrito -->
+                         <ul id="carrito" class="list-group"> 
+                        <hr>
+                            <!-- precio total -->
+                            <p class="text-right">total: $ <span id="total"></span></p>
+                            <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                            <button id="" class="btn btn-info">Pagar</button>
+                         </ul>
+                    </aside>
+                </div>
+
+             </div>
+        </div>
+    </div>
+</div>
+
+
+<!--inicio del footer-->
+<footer class="bg-dark" id="page_footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-success border-bottom pb-3 border-light log">Proyecto final</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt fa-fw"> </i>
+                        Ubicación principal - Barranquilla, Colombia
+                    </li>
+                    <li>
+                        <i class="fa fa-phone fa-fw"></i>
+                        <a class="navbar-sm-brand text-light text-decoration-none" href="tel:304-348-1993">+57-304-348-1993</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope mx-2"></i>
+                        <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:jairpugliese@gmail.com">jairpugliese@gmail.com</a>
+                    </li>
+                </ul>
+            </div>    
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light log">Productos</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="#" >Producto 1</a> </li>
+                    <li><a class="text-decoration-none" href="#" >Producto 2</a> </li>
+                    <li><a class="text-decoration-none" href="#" >Producto 3</a> </li>
+                    <li><a class="text-decoration-none" href="#" >Producto 4</a> </li>
+                    <li><a class="text-decoration-none" href="#" >Producto 5</a> </li>
+                </ul>
+            </div>
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light log">Más información</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="index.html" >Inicio</a> </li>
+                    <li><a class="text-decoration-none" href="dispositivos.html" >Dispositivos</a> </li>
+                    <li><a class="text-decoration-none" href="metodosdepago.html" >Métodos de pago</a> </li>
+                    <li><a class="text-decoration-none" href="acercade.html" >Acerca de</a> </li>
+                </ul>
+            </div>
+
+        </div>
+
+<!--Copyright-->
+    </div>
+    <div class="w-100 bg-black py3">
+        <div class="container">
+            <div class="">
+                <div class="row pt-2">
+                    <p class="text-left text-light">
+                        Copyright &copy; 2024 - Sells-phones | Diseñado por Jair Pugliese 
+                    </p>
+
+                </div>
+
+            </div>
+            <div class="row text-light mb-4">
+                <div class="col-12 mb-3">
+                    <div class="w-100 my-3 border-top border-light"></div>
+                </div>
+                <div class="col-auto me-auto">
+                    <ul class="list-inline text-left footer-icons">
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                        </li>
+                        <li class="list-inline-item border border-light rounded-circle text-center">
+                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <label class="sr-only" for="subscribeEmail">Escriba su Email</label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
+                        <div class="input-group-text btn-success text-light">Subscribirse</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<!--Archivos JS-->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="assets/js/jquery-1.11.0.min.js"></script>
+<script src="assets/js/templatemo.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="assets/js/carro.js"></script>
+    
 </body>
-</html>
