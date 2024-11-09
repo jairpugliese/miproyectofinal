@@ -137,6 +137,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    //contador de visitas
+    let visitas = localStorage.getItem('contadorVisitas');}
+    if(!visitas){
+        visitas=0;
+    }
+    visitas++;
+
+    //guardar en local
+    localStorage.setItem('contadorVisitas,visitas')
 
 
     // Guardar carrito en localStorage
