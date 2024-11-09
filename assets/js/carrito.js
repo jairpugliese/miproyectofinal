@@ -116,10 +116,10 @@ document.addEventListener('DOMContentLoaded', () => {
         carrito = carrito.filter((carritoId) => carritoId {
             return carritoId !==id;
         });
-
         renderizarCarrito();
         handleCarritoValue(carrito.length);
     }
+
 
     // Calcular total
     function calcularTotal() {
