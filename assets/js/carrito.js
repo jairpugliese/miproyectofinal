@@ -83,20 +83,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const carritoSinDuplicados = [...new Set(carrito)];  // Eliminar duplicados
 
         // Generar nodos
-        carritoSinDuplicados.forEach((item) => {
-            const miItem = baseDatos.filter((itemBaseDatos) => itemBaseDatos.id === parseInt(item))[0];
-            const numeroUnidadesItem = carrito.reduce((total, itemId) => itemId === item ? total + 1 : total, 0);
+        carritoSinDuplicados.forEach((items) => {
+            const miItem = baseDatos.filter((itemBaseDatos) => itemBaseDatos.id === parseInt(items))[0];
+            const numeroUnidadesItem = carrito.reduce((total, itemId) => itemId === items ? total + 1 : total, 0);
 
             // Crear nodo
             const miNodo = document.createElement('li');
-            miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+            miNodo.classList.add('list-group-items', 'text-right', 'mx-2');
             miNodo.textContent = `${numeroUnidadesItem} x ${miItem.nombre} - ${divisa}${miItem.precio}`;
 
             // Botón para borrar
             const miBoton = document.createElement('button');
             miBoton.classList.add('btn', 'btn-danger', 'mx-5');
             miBoton.textContent = 'X';
-            miBoton.dataset.item = item;
+            miBoton.dataset.items = items;
             miBoton.addEventListener('click', borrarItemCarrito);
 
             // Mezclar nodos
@@ -108,9 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
         DOMtotal.textContent = calcularTotal();
     }
 
-    // Borrar item del carrito
+    // Borrar items del carrito
     function borrarItemCarrito(evento) {
-        const id = evento.target.dataset.item;
+        const id = evento.target.dataset.items;
         carrito = carrito.filter((carritoId) => carritoId !== id);
         renderizarCarrito();
         guardarCarritoEnLocalStorage();
@@ -119,11 +119,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Calcular total
     function calcularTotal() {
-        return carrito.reduce((total, item) => {
-            const miItem = baseDatos.filter((itemBaseDatos) => {
-            return itemBaseDatos.id===parseInt(item);
+        return carrito.reduce((total, items) => {
+            const miItems = baseDatos.filter((itemBaseDatos) => {
+            return itemBaseDatos.id===parseInt(items);
         });
-        return total + miItem[0].precio;
+        return total + miItems[0].precio;
 
         },0).toFixed(2);
         
