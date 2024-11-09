@@ -136,6 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderizarCarrito();
     }
 
+    
 
 
 
