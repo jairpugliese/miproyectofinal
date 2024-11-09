@@ -5,14 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
             nombre: 'iPhone 12, descripción',
             precio: 1200000,
             imagen: 'assets/img/iPhone1.png',
-            categoria: 'Smartphones',  // Añadí una categoría, si no la necesitas, puedes eliminar esta propiedad
         },
         {
             id: 2,
             nombre: 'iPhone 13, descripción',
             precio: 12500000,
-            imagen: 'assets/img/iPhone2.png',
-            categoria: 'Smartphones',  // Añadí una categoría también aquí
+            imagen: 'assets/img/iPhone2.png'
         }
     ];
 
@@ -21,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const DOMitems = document.querySelector('#items');
     const DOMcarrito = document.querySelector('#carrito');
     const DOMtotal = document.querySelector('#total');
+    const DOMbotonvaciar = document.querySelector('#boton-vaciar');
     const carritoContainer = document.getElementById("carrito-value");
 
     // Renderizar productos
@@ -75,7 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Actualizar cantidad en el carrito
     function handleCarritoValue(value) {
-        carritoContainer.textContent = `${value}`;
+        const carritoContainer = document.getElementById ("carrito-value");
+        carritoContainer.textContent= `${value}`
     }
 
     // Renderizar carrito
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Crear nodo
             const miNodo = document.createElement('li');
-            miNodo.classList.add('list-group-item', 'text-right', 'mx-2');
+            miNodo.classList.add('list-group-items', 'text-right', 'mx-2');
             miNodo.textContent = `${numeroUnidadesItem} x ${miItem.nombre} - ${divisa}${miItem.precio}`;
 
             // Botón para borrar
@@ -112,36 +112,42 @@ document.addEventListener('DOMContentLoaded', () => {
     // Borrar items del carrito
     function borrarItemCarrito(evento) {
         const id = evento.target.dataset.items;
-        carrito = carrito.filter((carritoId) => carritoId !== id); // Corregí la sintaxis aquí
+        carrito = carrito.filter((carritoId) => carritoId !== id);
         renderizarCarrito();
-        handleCarritoValue(carrito.length);
         guardarCarritoEnLocalStorage();
+        handleCarritoValue(carrito.length);
     }
 
     // Calcular total
     function calcularTotal() {
         return carrito.reduce((total, items) => {
-            const miItems = baseDatos.filter((itemBaseDatos) => itemBaseDatos.id === parseInt(items));
-            return total + miItems[0].precio;
-        }, 0).toFixed(2); // Usé .toFixed(2) para asegurar que el total tenga dos decimales
+            const miItems = baseDatos.filter((itemBaseDatos) => {
+            return itemBaseDatos.id===parseInt(items);
+        });
+        return total + miItems[0].precio;
+
+        },0).toFixed(2);
+        
     }
 
-    // Vaciar carrito
-    function vaciarCarrito() {
-        carrito = [];
+    //vaciar carrito
+    function vaciarCarrito(){
+        carrito=[];
         renderizarCarrito();
         localStorage.clear();
     }
 
-    // Contador de visitas
-    let visitas = localStorage.getItem('contadorVisitas');
-    if (!visitas) {
-        visitas = 0;
+
+    //contador de visitas
+    let visitas = localStorage.getItem('contadorVisitas');}
+    if(!visitas){
+        visitas=0;
     }
     visitas++;
 
-    // Guardar contador de visitas en localStorage
-    localStorage.setItem('contadorVisitas', visitas);
+    //guardar en local
+    localStorage.setItem('contadorVisitas,visitas')
+
 
     // Guardar carrito en localStorage
     function guardarCarritoEnLocalStorage() {
