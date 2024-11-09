@@ -226,7 +226,7 @@
                         miNodoPrecio.textContent = `${divisa}${info.precio}`;
 
                         //boton
-                        const MiNodoBoton = document.createElement('buton');
+                        const MiNodoBoton = document.createElement('button');
                         MiNodoBoton.classList.add('btn','btn-primary');
                         MiNodoBoton.textContent='Agregar';
                         MiNodoBoton.setAttribute('marcador',info.id);
@@ -235,8 +235,8 @@
                         miNodoCardBody.appendChild(miNodoImagen);
                         miNodoCardBody.appendChild(miNodoTitle);
                         miNodoCardBody.appendChild(miNodoPrecio);
-                        miNodoCardBody.appendChild(miNodoCardBody);
-                        DOMitems-appendChild(miNodo);
+                        miNodo.appendChild(miNodoCardBody);
+                        DOMitems.appendChild(miNodo);
                         
                     });
                 }
@@ -256,7 +256,7 @@
                     //vaciar html
                     DOMcarrito.textContent = '';
                     //quitar duplicados
-                    const carritoSinDuplicados = [... new set(carrito)];
+                    const carritoSinDuplicados = [... new Set(carrito)];
                     //generación de los nodos
                     carritoSinDuplicados.forEach((item)=>{
                         //obtenemos el item que necesitamos de la base de datos
