@@ -74,7 +74,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Actualizar cantidad en el carrito
     function handleCarritoValue(value) {
-        carritoContainer.textContent = value;
+        const carritoContainer = document.getElementById ("carrito-value");
+        carritoContainer.textContent= `${value}`
     }
 
     // Renderizar carrito
@@ -134,6 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
         carrito=[];
         renderizarCarrito();
     }
+
+
+
 
     // Guardar carrito en localStorage
     function guardarCarritoEnLocalStorage() {
