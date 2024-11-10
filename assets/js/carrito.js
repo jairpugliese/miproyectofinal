@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 3,
             nombre: 'Samsung, descripción',
             precio: 1200000,
-            imagen: 'assets/img/iPhone3.png',
+            imagen: 'assets/img/iphone3.png',
             categoria: 'Samsung'
         }
     ];
