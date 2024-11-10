@@ -4,13 +4,22 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             nombre: 'iPhone 12, descripción',
             precio: 1200000,
-            imagen: 'assets/img/iPhone1.png'
+            imagen: 'assets/img/iPhone1.png',
+            categoria: 'iPhone',
         },
         {
             id: 2,
             nombre: 'iPhone 13, descripción',
-            precio: 1250000, 
-            imagen: 'assets/img/iPhone2.png'
+            precio: 1250000,
+            imagen: 'assets/img/iPhone2.png',
+            categoria: 'iPhone',
+        },
+        {
+            id: 3,
+            nombre: 'Samsung, descripción',
+            precio: 1200000,
+            imagen: 'assets/img/iPhone3.png',
+            categoria: 'Samsung',
         }
     ];
 
@@ -20,32 +29,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const DOMcarrito = document.querySelector('#carrito');
     const DOMtotal = document.querySelector('#total');
     const DOMbotonvaciar = document.querySelector('#boton-vaciar');
+    const DOMfiltroCategoria = document.querySelector('#filtro');
 
-    //Contador de visitas
+    // Contador de visitas
     function actualizarContadorVisitas() {
-        // Obtener el número de visitas desde localStorage
         let visitas = localStorage.getItem('contadorVisitas');
-        
         if (!visitas) {
             visitas = 0;
         }
-
-        // Incrementar el número de visitas
         visitas++;
-        
-        // Guardar el nuevo valor en localStorage
         localStorage.setItem('contadorVisitas', visitas);
-
-        // Mostrar el contador en el DOM
         document.getElementById('contador').textContent = visitas;
     }
 
-    // Llamar a la función para actualizar el contador de visitas al cargar la página
     actualizarContadorVisitas();
 
     // Renderizar productos
-    function renderizarProductos() {
-        baseDatos.forEach((info) => {
+    function renderizarProductos(categoriaSeleccionada = 'todos') {
+        DOMitems.textContent = ''; // Limpiar los productos existentes
+
+        // Filtrar productos por categoría
+        const productosFiltrados = categoriaSeleccionada === 'todos'
+            ? baseDatos
+            : baseDatos.filter(producto => producto.categoria === categoriaSeleccionada);
+
+        productosFiltrados.forEach((info) => {
             const miNodo = document.createElement('div');
             miNodo.classList.add('card', 'col-sm-4');
 
@@ -111,9 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
             DOMcarrito.appendChild(miNodo);
         });
 
-        const totalProductos = contarProductosEnCarrito();  
+        const totalProductos = contarProductosEnCarrito();
         document.getElementById('carrito-value').textContent = totalProductos; // Actualizamos el contador visual
-    
         DOMtotal.textContent = calcularTotal();
     }
 
@@ -130,11 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para contar el total de productos en el carrito
     function contarProductosEnCarrito() {
-        const totalProductos = carrito.reduce((total, item) => total + item.cantidad, 0);
-    return totalProductos;
+        return carrito.reduce((total, item) => total + item.cantidad, 0);
     }
-
-
 
     function vaciarCarrito() {
         carrito = [];
@@ -155,7 +159,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Cargar carrito y productos al iniciar
     cargarCarritoDeLocalStorage();
     renderizarProductos();
-    renderizarCarrito();
+
+    // Agregar funcionalidad al filtro
+    DOMfiltroCategoria.addEventListener('change', (evento) => {
+        const categoriaSeleccionada = evento.target.value;
+        renderizarProductos(categoriaSeleccionada); // Llamar a la función de renderizar con la categoría seleccionada
+    });
 });
