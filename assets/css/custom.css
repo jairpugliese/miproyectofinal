@@ -8,3 +8,9 @@ Custom Css
     object-fit:contain ;
     border: 5px solid black;
 }
+
+.img-cover{
+    width: 900px;
+    height: 300px;
+    object-fit:cover ;
+}
