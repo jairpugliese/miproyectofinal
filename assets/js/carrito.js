@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         // Llamar a la función para actualizar el contador al cargar la página
         actualizarContadorVisitas();    
-    });
+    })
 
     // Borrar items del carrito
     function borrarItemCarrito(evento) {
