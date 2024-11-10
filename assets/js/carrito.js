@@ -66,9 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Añadir producto al carrito
     function anadirProductoAlCarrito(evento) {
-        carrito.push(evento.target.getAttribute('marcador'));
+        const id = evento.target.getAttribute('marcador');
+        if (carrito[id]) {
+            carrito[id]++;
+        } else {
+            carrito[id] = 1;
+        }
         renderizarCarrito();
-        handleCarritoValue(carrito.length);
         guardarCarritoEnLocalStorage();
     }
 
@@ -108,6 +112,21 @@ document.addEventListener('DOMContentLoaded', () => {
         // Actualizar total
         DOMtotal.textContent = calcularTotal();
     }
+    
+    // Código contador de visitas
+    function actualizarContadorVisitas() {
+    let visitas = localStorage.getItem('contadorVisitas');    
+            if (!visitas) {
+                visitas = 0;
+            }
+            visitas++;
+            localStorage.setItem('contadorVisitas', visitas);
+            document.getElementById('contador').textContent = visitas;
+        }
+    
+        // Llamar a la función para actualizar el contador al cargar la página
+        actualizarContadorVisitas();    
+    });
 
     // Borrar items del carrito
     function borrarItemCarrito(evento) {
