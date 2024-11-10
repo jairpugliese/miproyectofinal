@@ -111,6 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
             DOMcarrito.appendChild(miNodo);
         });
 
+        const totalProductos = contarProductosEnCarrito();  
+        document.getElementById('carrito-value').textContent = totalProductos; // Actualizamos el contador visual
+    
         DOMtotal.textContent = calcularTotal();
     }
 
@@ -124,6 +127,14 @@ document.addEventListener('DOMContentLoaded', () => {
     function calcularTotal() {
         return carrito.reduce((total, item) => total + (item.precio * item.cantidad), 0).toFixed(2);
     }
+
+    // Función para contar el total de productos en el carrito
+    function contarProductosEnCarrito() {
+        const totalProductos = carrito.reduce((total, item) => total + item.cantidad, 0);
+    return totalProductos;
+    }
+
+
 
     function vaciarCarrito() {
         carrito = [];
