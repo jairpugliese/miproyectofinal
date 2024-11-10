@@ -131,13 +131,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     //vaciar carrito
-    function vaciarCarrito(){
-        carrito=[];
+    function vaciarCarrito() {
+        carrito = [];
         renderizarCarrito();
+        handleCarritoValue(0); // Actualizamos la cantidad del carrito a 0
+        guardarCarritoEnLocalStorage(); // Actualizar el localStorage
     }
 
-    
-
+    // Agregar funcionalidad al botón de vaciar carrito
+    DOMbotonvaciar.addEventListener('click', vaciarCarrito);
 
 
     // Guardar carrito en localStorage
