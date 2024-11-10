@@ -2,23 +2,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const baseDatos = [
         {
             id: 1,
-            nombre: 'iPhone 12, descripción',
-            precio: 1200000,
-            imagen: 'assets/img/iPhone1.png',
+            nombre: 'iPhone X',
+            precio: 1250000,
+            imagen: 'assets/img/iphone_10.jpg',
             categoria: 'iPhone'
         },
         {
             id: 2,
-            nombre: 'iPhone 13, descripción',
-            precio: 1250000,
-            imagen: 'assets/img/iPhone2.png',
+            nombre: 'iPhone 12',
+            precio: 1300000,
+            imagen: 'assets/img/iphone_12.jpg',
             categoria: 'iPhone'
         },
         {
             id: 3,
-            nombre: 'Samsung, descripción',
+            nombre: 'Samsung',
             precio: 1200000,
-            imagen: 'assets/img/iphone3.png',
+            imagen: 'assets/img/samsung_s22.jpg',
             categoria: 'Samsung'
         }
     ];
