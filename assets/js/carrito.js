@@ -4,22 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 1,
             nombre: 'iPhone 12, descripción',
             precio: 1200000,
-            imagen: 'assets/img/iPhone1.png',
-            categoria: 'iPhone',
+            imagen: 'assets/img/iPhone1.png'
         },
         {
             id: 2,
             nombre: 'iPhone 13, descripción',
             precio: 1250000, 
             imagen: 'assets/img/iPhone2.png'
-            categoria: 'iPhone',
-        },
-        {
-            id: 3,
-            nombre: 'Samsung, descripción',
-            precio: 1200000,
-            imagen: 'assets/img/iPhone3.png',
-            categoria: 'Samsung',
         }
     ];
 
@@ -29,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const DOMcarrito = document.querySelector('#carrito');
     const DOMtotal = document.querySelector('#total');
     const DOMbotonvaciar = document.querySelector('#boton-vaciar');
-    const DOMfiltroCategoria= document.querySelector('#filtro')
 
     //Contador de visitas
     function actualizarContadorVisitas() {
