@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const DOMcarrito = document.querySelector('#carrito');
     const DOMtotal = document.querySelector('#total');
     const DOMbotonvaciar = document.querySelector('#boton-vaciar');
-    const DOMfiltroCategoria= document.querySelector('#filtro');
+    const DOMfiltroCategoria= document.querySelector('#filtro')
 
     //Contador de visitas
     function actualizarContadorVisitas() {
@@ -54,13 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
     actualizarContadorVisitas();
 
     // Renderizar productos
-    function renderizarProductos(categoriaSeleccionada = 'todos') {
-
-        const productosFiltraddos = categoriaSeleccionada === 'todos'
-        ? baseDatos 
-        : baseDatos.filter(producto.categoria) === categoriaSeleccionada;
-
-        productosFiltraddos.forEach((info) => {
+    function renderizarProductos() {
+        baseDatos.forEach((info) => {
             const miNodo = document.createElement('div');
             miNodo.classList.add('card', 'col-sm-4');
 
